@@ -1,1 +1,9 @@
-<p>main-page works!</p>
+<h1>Fruits Insta</h1>
+
+@for (post of posts; track $index) {
+    <article>
+        <h2>{{post.name}}</h2>
+        <img [src]="post.img" [alt]="post.name + 'img'">
+        <p>{{post.likes}} Likes</p>
+    </article>
+}
