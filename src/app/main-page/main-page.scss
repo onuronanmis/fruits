@@ -3,3 +3,15 @@ img{
     height: auto;
     padding-top: 30px;
 }
+
+.heart-icon{
+    width: 30px;
+    padding-top: 6px;
+}
+
+.like-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
