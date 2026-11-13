@@ -1,9 +1,17 @@
 <h1>Fruits Insta</h1>
+<a routerLink="/contact">Contact</a>
 
 @for (post of posts; track $index) {
     <article>
         <h2>{{post.name}}</h2>
         <img [src]="post.img" [alt]="post.name + 'img'">
+        <button class="like-button" (click)="toggleLike(post)">
+            @if (post.isLiked == true) {
+                <img class="heart-icon" src="img/heart-red.png" alt="liked">
+            } @else {
+                <img class="heart-icon" src="img/heart-black.png" alt="not liked">
+            }
+        </button>
         <p>{{post.likes}} Likes</p>
     </article>
 }
